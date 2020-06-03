@@ -1,0 +1,10 @@
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var lines = input.split('\n');
+const prod1Elems = lines[0].split(' ');
+const x1 = parseFloat(prod1Elems[0]);
+const y1 = parseFloat(prod1Elems[1]);
+const prod2Elems = lines[1].split(' ');
+const x2 = parseFloat(prod2Elems[0]);
+const y2 = parseFloat(prod2Elems[1]);
+const result = Math.sqrt(Math.pow(x2-x1,2)+(Math.pow(y2-y1,2)));
+console.log(result.toFixed(4));

@@ -1,0 +1,12 @@
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var lines = input.split('\n');
+const prod1Elems = lines[0].split(' ');
+const prod1Code = parseInt(prod1Elems[0]);
+const prod1Count = parseInt(prod1Elems[1]);
+const prod1Price = parseFloat(prod1Elems[2]);
+const prod2Elems = lines[1].split(' ');
+const prod2Code = parseInt(prod2Elems[0]);
+const prod2Count = parseInt(prod2Elems[1]);
+const prod2Price = parseFloat(prod2Elems[2]);
+const sum = prod1Count*prod1Price+prod2Count*prod2Price;                              
+console.log('VALOR A PAGAR: R$ '+sum.toFixed(2));

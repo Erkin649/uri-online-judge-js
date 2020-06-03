@@ -1,0 +1,17 @@
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var lines = input.split('\n');
+const elems = lines[0].split(' ');
+const A = parseFloat(elems[0]);
+const B =parseFloat(elems[1]);
+const C =parseFloat(elems[2]);
+const pi = 3.14159;
+const Tr = A * C / 2;
+const circle = pi*C*C;
+const tra = 1/2 * C * (A + B);
+const sq = B * B;
+const rec = A * B;
+console.log('TRIANGULO: '+ Tr.toFixed(3));
+console.log('CIRCULO: '+ circle.toFixed(3));
+console.log('TRAPEZIO: '+ tra.toFixed(3));
+console.log('QUADRADO: '+ sq.toFixed(3));
+console.log('RETANGULO: '+ rec.toFixed(3));
